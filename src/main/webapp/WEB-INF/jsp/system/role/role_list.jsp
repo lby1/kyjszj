@@ -329,7 +329,6 @@
 		var hcid1 = '';
 		var qxhc1 = '';
 		function kf_qx1(id,kefu_id,msg){
-			alert(id);
 			if(id != hcid1){
 				hcid1 = id;
 				qxhc1 = '';
