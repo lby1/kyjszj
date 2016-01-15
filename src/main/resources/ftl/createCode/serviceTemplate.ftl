@@ -1,4 +1,4 @@
-package com.fh.service.${packageName}.${objectNameLower};
+package com.kyjszj.service.${packageName}.${objectNameLower};
 
 import java.util.List;
 
@@ -6,16 +6,16 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
-import com.fh.dao.DaoSupport;
-import com.fh.entity.Page;
-import com.fh.util.PageData;
+import com.kyjszj.dao.BaseDaoSupport;
+import com.kyjszj.entity.Page;
+import com.kyjszj.util.PageData;
 
 
-@Service("${objectNameLower}Service")
+@Service
 public class ${objectName}Service {
 
-	@Resource(name = "daoSupport")
-	private DaoSupport dao;
+	@Resource
+	private BaseDaoSupport dao;
 	
 	/*
 	* 新增

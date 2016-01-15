@@ -1,4 +1,4 @@
-package com.fh.controller.${packageName}.${objectNameLower};
+package com.kyjszj.controller.${packageName}.${objectNameLower};
 
 import java.io.PrintWriter;
 import java.text.DateFormat;
@@ -24,19 +24,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.fh.controller.base.BaseController;
-import com.fh.entity.system.Menu;
-import com.fh.entity.Page;
-import com.fh.util.AppUtil;
-import com.fh.util.ObjectExcelView;
-import com.fh.util.Const;
-import com.fh.util.PageData;
-import com.fh.util.Tools;
-import com.fh.service.${packageName}.${objectNameLower}.${objectName}Service;
+import com.kyjszj.controller.base.BaseController;
+import com.kyjszj.entity.system.Menu;
+import com.kyjszj.entity.Page;
+import com.kyjszj.util.AppUtil;
+import com.kyjszj.util.ObjectExcelView;
+import com.kyjszj.util.Const;
+import com.kyjszj.util.PageData;
+import com.kyjszj.util.Tools;
+import com.kyjszj.service.${packageName}.${objectNameLower}.${objectName}Service;
 
 /** 
  * 类名称：${objectName}Controller
- * 创建人：FH 
+ * 创建人：kyjszj
  * 创建时间：${nowDate?string("yyyy-MM-dd")}
  */
 @Controller
