@@ -1,15 +1,14 @@
 package com.kyjszj.controller.base;
 
-import javax.servlet.http.HttpServletRequest;
-
+import com.kyjszj.model.Page;
+import com.kyjszj.util.PageData;
+import com.kyjszj.util.UuidUtil;
 import org.apache.log4j.Logger;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.kyjszj.model.Page;
-import com.kyjszj.util.PageData;
-import com.kyjszj.util.UuidUtil;
+import javax.servlet.http.HttpServletRequest;
 
 public class BaseController {
 	protected Logger logger = Logger.getLogger(this.getClass());
