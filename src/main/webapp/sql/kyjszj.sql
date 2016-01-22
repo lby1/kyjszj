@@ -113,17 +113,17 @@ DROP TABLE IF EXISTS `sys_gl_qx`;
 CREATE TABLE `sys_gl_qx` (
   `GL_ID` varchar(300) DEFAULT NULL,
   `ROLE_ID` varchar(300) DEFAULT NULL,
-  `FX_QX` double DEFAULT NULL,
-  `FW_QX` double DEFAULT NULL,
-  `QX1` double DEFAULT NULL,
-  `QX2` double DEFAULT NULL,
-  `QX3` double DEFAULT NULL,
-  `QX4` double DEFAULT NULL
+  `FX_QX` int(11) DEFAULT NULL,
+  `FW_QX` int(11) DEFAULT NULL,
+  `QX1` int(11) DEFAULT NULL,
+  `QX2` int(11) DEFAULT NULL,
+  `QX3` int(11) DEFAULT NULL,
+  `QX4` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `sys_gl_qx` */
 
-insert  into `sys_gl_qx`(`GL_ID`,`ROLE_ID`,`FX_QX`,`FW_QX`,`QX1`,`QX2`,`QX3`,`QX4`) values ('1','2',1,1,1,1,1,1),('2','1',0,0,1,0,1,1),('55896f5ce3c0494fa6850775a4e29ff6','7',0,0,1,0,0,0),('68f23fc0caee475bae8d52244dea8444','7',0,0,1,0,0,0),('7dfd8d1f7b6245d283217b7e63eec9b2','1',0,0,0,1,0,0),('ac66961adaa2426da4470c72ffeec117','1',1,0,0,1,0,0),('b0c77c29dfa140dc9b14a29c056f824f','7',1,0,1,0,0,0),('e74f713314154c35bd7fc98897859fe3','6',1,1,1,1,0,0),('f944a9df72634249bbcb8cb73b0c9b86','7',1,1,1,0,0,0);
+insert  into `sys_gl_qx`(`GL_ID`,`ROLE_ID`,`FX_QX`,`FW_QX`,`QX1`,`QX2`,`QX3`,`QX4`) values ('1','2',1,1,1,1,1,1),('2','1',1,1,1,1,1,1),('55896f5ce3c0494fa6850775a4e29ff6','7',0,0,1,0,0,0),('68f23fc0caee475bae8d52244dea8444','7',0,0,1,0,0,0),('7dfd8d1f7b6245d283217b7e63eec9b2','1',1,1,1,1,0,0),('ac66961adaa2426da4470c72ffeec117','1',1,1,1,1,0,0),('b0c77c29dfa140dc9b14a29c056f824f','7',1,0,1,0,0,0),('e74f713314154c35bd7fc98897859fe3','6',1,1,1,1,0,0),('f944a9df72634249bbcb8cb73b0c9b86','7',1,1,1,0,0,0);
 
 /*Table structure for table `sys_link` */
 
@@ -225,7 +225,7 @@ CREATE TABLE `sys_role` (
 
 /*Data for the table `sys_role` */
 
-insert  into `sys_role`(`ROLE_ID`,`ROLE_NAME`,`RIGHTS`,`PARENT_ID`,`ADD_QX`,`DEL_QX`,`EDIT_QX`,`CHA_QX`,`QX_ID`) values ('1','系统管理员','268435446','0','1','1','1','1','1'),('2','超级管理员','268435446','1','268435446','268435446','268435446','268435446','2'),('4','用户组','118','0','0','0','0','0',NULL),('55896f5ce3c0494fa6850775a4e29ff6','特级会员','498','7','1048630','0','0','0','55896f5ce3c0494fa6850775a4e29ff6'),('6','客户组','18','0','1','1','1','1',NULL),('68f23fc0caee475bae8d52244dea8444','中级会员','498','7','0','0','0','0','68f23fc0caee475bae8d52244dea8444'),('7','会员组','498','0','0','0','0','1',NULL),('7dfd8d1f7b6245d283217b7e63eec9b2','管理员B','268435446','1','246','0','0','0','7dfd8d1f7b6245d283217b7e63eec9b2'),('ac66961adaa2426da4470c72ffeec117','管理员A','268435446','1','54','54','0','246','ac66961adaa2426da4470c72ffeec117'),('b0c77c29dfa140dc9b14a29c056f824f','高级会员','498','7','0','0','0','0','b0c77c29dfa140dc9b14a29c056f824f'),('e74f713314154c35bd7fc98897859fe3','黄金客户','18','6','1','1','1','1','e74f713314154c35bd7fc98897859fe3'),('f944a9df72634249bbcb8cb73b0c9b86','初级会员','498','7','1','1','1','1','f944a9df72634249bbcb8cb73b0c9b86');
+insert  into `sys_role`(`ROLE_ID`,`ROLE_NAME`,`RIGHTS`,`PARENT_ID`,`ADD_QX`,`DEL_QX`,`EDIT_QX`,`CHA_QX`,`QX_ID`) values ('1','系统管理员','268435446','0','1','1','1','1','1'),('2','超级管理员','268435446','1','268428022','268435446','268435446','268435446','2'),('4','用户组','118','0','0','0','0','0',NULL),('55896f5ce3c0494fa6850775a4e29ff6','特级会员','498','7','1048630','0','0','0','55896f5ce3c0494fa6850775a4e29ff6'),('6','客户组','18','0','1','1','1','1',NULL),('68f23fc0caee475bae8d52244dea8444','中级会员','498','7','0','0','0','0','68f23fc0caee475bae8d52244dea8444'),('7','会员组','498','0','0','0','0','1',NULL),('7dfd8d1f7b6245d283217b7e63eec9b2','管理员B','268435446','1','246','0','0','0','7dfd8d1f7b6245d283217b7e63eec9b2'),('ac66961adaa2426da4470c72ffeec117','管理员A','268435446','1','54','54','0','246','ac66961adaa2426da4470c72ffeec117'),('b0c77c29dfa140dc9b14a29c056f824f','高级会员','498','7','0','0','0','0','b0c77c29dfa140dc9b14a29c056f824f'),('e74f713314154c35bd7fc98897859fe3','黄金客户','18','6','1','1','1','1','e74f713314154c35bd7fc98897859fe3'),('f944a9df72634249bbcb8cb73b0c9b86','初级会员','498','7','1','1','1','1','f944a9df72634249bbcb8cb73b0c9b86');
 
 /*Table structure for table `sys_user` */
 
@@ -251,7 +251,7 @@ CREATE TABLE `sys_user` (
 
 /*Data for the table `sys_user` */
 
-insert  into `sys_user`(`USER_ID`,`USERNAME`,`PASSWORD`,`NAME`,`RIGHTS`,`ROLE_ID`,`LAST_LOGIN`,`IP`,`STATUS`,`BZ`,`SKIN`,`EMAIL`,`NUMBER`,`PHONE`) values ('089d664844f8441499955b3701696fc0','fushide','67bc304642856b709dfeb907b92cc7e10e0b02f2','富师德','','2','','','0','18629359','default','asdadf@qq.com','1231','18766666666'),('0b3f2ab1896b47c097a81d322697446a','zhangsan','f1665429dbb3e6c2af7a461a4f547b82ee9ab233','张三','','2','2016-01-08 10:09:15','0:0:0:0:0:0:0:1','0','小张','default','wwwwq@qq.com','1101','18788888888'),('0e2da7c372e147a0b67afdf4cdd444a3','dfsdf','c49639f0b2c5dda506b777a1e518990e9a88a221','wqeqw','','e74f713314154c35bd7fc98897859fe3','','','0','ff','default','q324@qq.com','dsfsdddd','18767676767'),('1','admin','de41b7fb99201d8334c23c014db35ecd92df81bc','系统管理员','1133671055321055258374707980945218933803269864762743594642571294','1','2016-01-14 13:58:34','0:0:0:0:0:0:0:1','0','最高统治者','default','admin@main.com','001','18788888888'),('3d3bacf7535444cda51f23711e32c0b2','sss','6d606b5972e69fd5173faff05a28aa38e2b38d38','中丧生','','ac66961adaa2426da4470c72ffeec117','','','0','cess','default','12312315@qq.com','223','18777777878'),('79d9e8d227d14902871e162950d17356','xinyonghu','527e060c0c42db870b0d83cf97d28fa0111cf2f9','新用户22','','2','','','0','新用户22','default','zhangsassn@www.com','121121','18765656556'),('8009132b158748a5a84510f91a291119','asdasd','26be4dd18f543d7002b4d8aa525f90a33c0faefb','sdsdf','','7dfd8d1f7b6245d283217b7e63eec9b2','','','0','','default','12312312@qq.com','2312','18765810587'),('b825f152368549069be79e1d34184afa','san','47c4a8dc64ac2f0bb46bbd8813b037c9718f9349','三','','2','2015-08-03 14:18:14','127.0.0.1','0','sdfsdgf','default','sdfsdf@qq.com','sdsaw22','18765656565'),('be025a79502e433e820fac37ddb1cfc2','zhangsan570256','42f7554cb9c00e11ef16543a2c86ade815b79faa','张三','','2','','','0','小张','default','zhangsan@www.com','21101','2147483647');
+insert  into `sys_user`(`USER_ID`,`USERNAME`,`PASSWORD`,`NAME`,`RIGHTS`,`ROLE_ID`,`LAST_LOGIN`,`IP`,`STATUS`,`BZ`,`SKIN`,`EMAIL`,`NUMBER`,`PHONE`) values ('089d664844f8441499955b3701696fc0','fushide','de41b7fb99201d8334c23c014db35ecd92df81bc','富师德','','2','','','0','18629359','default','asdadf@qq.com','1231','18766666666'),('0b3f2ab1896b47c097a81d322697446a','zhangsan','de41b7fb99201d8334c23c014db35ecd92df81bc','张三','','2','2016-01-08 10:09:15','0:0:0:0:0:0:0:1','0','小张','default','wwwwq@qq.com','1101','18788888888'),('0e2da7c372e147a0b67afdf4cdd444a3','dfsdf','de41b7fb99201d8334c23c014db35ecd92df81bc','wqeqw','','e74f713314154c35bd7fc98897859fe3','','','0','ff','default','q324@qq.com','dsfsdddd','18767676767'),('1','admin','de41b7fb99201d8334c23c014db35ecd92df81bc','系统管理员','1133671055321055258374707980945218933803269864762743594642571294','1','2016-01-22 13:52:37','127.0.0.1','0','最高统治者','default','admin@main.com','001','18788888888'),('3d3bacf7535444cda51f23711e32c0b2','sss','6d606b5972e69fd5173faff05a28aa38e2b38d38','中丧生','','ac66961adaa2426da4470c72ffeec117','2016-01-19 10:24:01','192.168.1.104','0','cess','default','12312315@qq.com','223','18777777878'),('79d9e8d227d14902871e162950d17356','xinyonghu','de41b7fb99201d8334c23c014db35ecd92df81bc','新用户22','','2','','','0','新用户22','default','zhangsassn@www.com','121121','18765656556'),('8009132b158748a5a84510f91a291119','asdasd','de41b7fb99201d8334c23c014db35ecd92df81bc','sdsdf','','7dfd8d1f7b6245d283217b7e63eec9b2','','','0','','default','12312312@qq.com','2312','18765810587'),('b825f152368549069be79e1d34184afa','san','de41b7fb99201d8334c23c014db35ecd92df81bc','三','','2','2015-08-03 14:18:14','127.0.0.1','0','sdfsdgf','default','sdfsdf@qq.com','sdsaw22','18765656565'),('be025a79502e433e820fac37ddb1cfc2','zhangsan570256','de41b7fb99201d8334c23c014db35ecd92df81bc','张三','','2','','','0','小张','default','zhangsan@www.com','21101','2147483647');
 
 /*Table structure for table `sys_user_qx` */
 
@@ -272,7 +272,7 @@ CREATE TABLE `sys_user_qx` (
 
 /*Data for the table `sys_user_qx` */
 
-insert  into `sys_user_qx`(`U_ID`,`C1`,`C2`,`C3`,`C4`,`Q1`,`Q2`,`Q3`,`Q4`) values ('1',1,0,0,0,0,0,0,0),('2',1,1,1,1,1,1,1,1),('55896f5ce3c0494fa6850775a4e29ff6',0,0,0,0,0,0,0,0),('68f23fc0caee475bae8d52244dea8444',0,0,0,0,0,0,0,0),('7dfd8d1f7b6245d283217b7e63eec9b2',0,0,0,0,0,0,0,0),('ac66961adaa2426da4470c72ffeec117',0,0,0,0,0,0,0,0),('b0c77c29dfa140dc9b14a29c056f824f',0,0,0,0,0,0,0,0),('e74f713314154c35bd7fc98897859fe3',0,0,0,0,0,0,0,0),('f944a9df72634249bbcb8cb73b0c9b86',0,0,0,0,0,0,0,0);
+insert  into `sys_user_qx`(`U_ID`,`C1`,`C2`,`C3`,`C4`,`Q1`,`Q2`,`Q3`,`Q4`) values ('1',1,0,0,0,0,0,0,0),('2',50,1,1,1,1,1,1,1),('55896f5ce3c0494fa6850775a4e29ff6',0,0,0,0,0,0,0,0),('68f23fc0caee475bae8d52244dea8444',0,0,0,0,0,0,0,0),('7dfd8d1f7b6245d283217b7e63eec9b2',11212,0,0,0,0,0,0,0),('ac66961adaa2426da4470c72ffeec117',0,0,0,0,0,0,0,0),('b0c77c29dfa140dc9b14a29c056f824f',0,0,0,0,0,0,0,0),('e74f713314154c35bd7fc98897859fe3',0,0,0,0,0,0,0,0),('f944a9df72634249bbcb8cb73b0c9b86',0,0,0,0,0,0,0,0);
 
 /*Table structure for table `tb_line` */
 
@@ -308,7 +308,7 @@ CREATE TABLE `tb_pictures` (
 
 /*Data for the table `tb_pictures` */
 
-insert  into `tb_pictures`(`PICTURES_ID`,`TITLE`,`NAME`,`PATH`,`CREATETIME`,`MASTER_ID`,`BZ`) values ('e1e30504ed7e4b1abb6b093d4151da66','图片','83fec586665d49f6a2e0b1070b8c7eba.jpg','20160114/83fec586665d49f6a2e0b1070b8c7eba.jpg','2016-01-11 15:00:03','1','图片管理处上传'),('9ca1d429fbd742b2a7e2f70e70f0e65c','图片','ab95e64dbe454f7488d296704061fd1a.jpg','20160114/ab95e64dbe454f7488d296704061fd1a.jpg','2016-01-14 11:25:35','1','图片管理处上传'),('485d05d920b5487b91ef800cae1079d3','图片','e9cd3821f53d4469bcf00e71a198ef4d.jpg','20160114/e9cd3821f53d4469bcf00e71a198ef4d.jpg','2016-01-14 11:44:09','1','图片管理处上传'),('6a8d35ef1650415d89788400987b7a2e','图片','65592910ac874458bd4ad3caefa5022e.jpg','20160114/65592910ac874458bd4ad3caefa5022e.jpg','2016-01-14 11:48:15','1','图片管理处上传'),('4267588047564da2832f641c2fad4115','图片','ab7f204373104c7da45d26ae3fdcaca3.jpg','20160114/ab7f204373104c7da45d26ae3fdcaca3.jpg','2016-01-14 11:50:03','1','图片管理处上传'),('0ff86bbb222046338ecd966bcbbb567a','图片','374babc477e84929b96b4cc83fc6eb0a.jpg','20160114/374babc477e84929b96b4cc83fc6eb0a.jpg','2016-01-14 11:50:15','1','图片管理处上传'),('e2a2a884e45f42ea83bd9583881423fd','图片','2ab344f58164400180f4e63e5eadf7c5.png','20160114/2ab344f58164400180f4e63e5eadf7c5.png','2016-01-14 11:50:16','1','图片管理处上传'),('b083418587a640b7ad18f9650e928f47','图片','4db66d26f3854b13bcfdf821d3d3bb69.jpg','20160114/4db66d26f3854b13bcfdf821d3d3bb69.jpg','2016-01-14 11:52:55','1','图片管理处上传');
+insert  into `tb_pictures`(`PICTURES_ID`,`TITLE`,`NAME`,`PATH`,`CREATETIME`,`MASTER_ID`,`BZ`) values ('e1e30504ed7e4b1abb6b093d4151da66','图片','83fec586665d49f6a2e0b1070b8c7eba.jpg','20160114/83fec586665d49f6a2e0b1070b8c7eba.jpg','2016-01-11 15:00:03','1','图片管理处上传'),('9ca1d429fbd742b2a7e2f70e70f0e65c','图片','ab95e64dbe454f7488d296704061fd1a.jpg','20160114/ab95e64dbe454f7488d296704061fd1a.jpg','2016-01-14 11:25:35','1','图片管理处上传'),('485d05d920b5487b91ef800cae1079d3','图片','e9cd3821f53d4469bcf00e71a198ef4d.jpg','20160114/e9cd3821f53d4469bcf00e71a198ef4d.jpg','2016-01-14 11:44:09','1','图片管理处上传'),('6a8d35ef1650415d89788400987b7a2e','图片','65592910ac874458bd4ad3caefa5022e.jpg','20160114/65592910ac874458bd4ad3caefa5022e.jpg','2016-01-14 11:48:15','1','图片管理处上传'),('4267588047564da2832f641c2fad4115','图片','ab7f204373104c7da45d26ae3fdcaca3.jpg','20160114/ab7f204373104c7da45d26ae3fdcaca3.jpg','2016-01-14 11:50:03','1','图片管理处上传'),('0ff86bbb222046338ecd966bcbbb567a','图片','374babc477e84929b96b4cc83fc6eb0a.jpg','20160114/374babc477e84929b96b4cc83fc6eb0a.jpg','2016-01-14 11:50:15','1','图片管理处上传'),('e2a2a884e45f42ea83bd9583881423fd','图片','2ab344f58164400180f4e63e5eadf7c5.png','20160114/2ab344f58164400180f4e63e5eadf7c5.png','2016-01-14 11:50:16','1','图片管理处上传');
 
 /*Table structure for table `weixin_command` */
 
